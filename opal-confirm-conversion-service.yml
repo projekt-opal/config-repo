@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: dataset-graph
+        output:
+          destination: opal-confirmed
+  rabbitmq:
+    host: ${RABBITMQ_ADDRESS}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}

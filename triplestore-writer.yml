@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: quality-added-datasets
+          group: triple-store
+  rabbitmq:
+    host: ${RABBITMQ_ADDRESS}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+    listener:
+      simple.max-concurrency: ${MAX_CONCURRENCY_WRITER:2}
+      simple.concurrency: ${MIN_CONCURRENCY_WRITER:1}
+
+info:
+  opal:
+    tripleStore:
+      url: http://${OPAL_TRIPLESTORE_URL}:3030/opal
+      username: ${OPAL_TRIPLESTORE_USERNAME}
+      password: ${OPAL_TRIPLESTORE_PASSWORD}

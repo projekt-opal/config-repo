@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: quality-added-datasets
+          group: elasticsearch
+  rabbitmq:
+    host: ${RABBITMQ_ADDRESS}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+
+
+
+#info:
+#  opal:
+#    elasticsearch:
+#      url: http://${OPAL_ELASTICSEARCH_URL}:9200
+#      username: ${OPAL_ELASTICSEARCH_USERNAME}
+#      password: ${OPAL_ELASTICSEARCH_PASSWORD}
