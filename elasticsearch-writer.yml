@@ -13,9 +13,10 @@ spring:
 
 
 
-#info:
-#  opal:
-#    elasticsearch:
-#      url: http://${OPAL_ELASTICSEARCH_URL}:9200
+info:
+  opal:
+    elasticsearch:
+      url: ${OPAL_ELASTICSEARCH_URL}
+      port: ${OPAL_ELASTICSEARCH_PORT}
 #      username: ${OPAL_ELASTICSEARCH_USERNAME}
 #      password: ${OPAL_ELASTICSEARCH_PASSWORD}
