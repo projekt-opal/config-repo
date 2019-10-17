@@ -5,6 +5,14 @@ spring:
         input:
           destination: quality-added-datasets
           group: triple-store
+      rabbitmq:
+        bindings:
+          output:
+            producer:
+              exchangeDurable: false
+          input:
+            consumer:
+              exchangeDurable: false     
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}
