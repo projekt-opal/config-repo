@@ -12,7 +12,8 @@ spring:
               exchangeDurable: false
           input:
             consumer:
-              exchangeDurable: false     
+              exchangeDurable: false
+              durableSubscription: false     
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}
