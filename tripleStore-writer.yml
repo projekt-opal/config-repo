@@ -7,9 +7,6 @@ spring:
           group: triple-store
       rabbit:
         bindings:
-          output:
-            producer:
-              exchangeDurable: false
           input:
             consumer:
               exchangeDurable: false

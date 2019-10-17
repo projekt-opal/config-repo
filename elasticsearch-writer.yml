@@ -7,9 +7,6 @@ spring:
           group: elasticsearch
       rabbit:
         bindings:
-          output:
-            producer:
-              exchangeDurable: false
           input:
             consumer:
               exchangeDurable: false
