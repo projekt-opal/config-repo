@@ -5,7 +5,7 @@ spring:
         input:
           destination: quality-added-datasets
           group: elasticsearch
-      rabbitmq:
+      rabbit:
         bindings:
           output:
             producer:

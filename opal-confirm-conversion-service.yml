@@ -6,7 +6,7 @@ spring:
           destination: dataset-graph
         output:
           destination: opal-confirmed
-      rabbitmq:
+      rabbit:
         bindings:
           output:
             producer:

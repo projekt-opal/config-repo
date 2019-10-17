@@ -5,7 +5,7 @@ spring:
         input:
           destination: quality-added-datasets
           group: triple-store
-      rabbitmq:
+      rabbit:
         bindings:
           output:
             producer:
