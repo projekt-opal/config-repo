@@ -13,7 +13,7 @@ spring:
               exchangeDurable: false
           input:
             consumer:
-              exchangeDurable: false
+              exchangeDurable: true
               durableSubscription: false
 
   rabbitmq:
