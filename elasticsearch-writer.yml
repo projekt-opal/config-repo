@@ -16,7 +16,9 @@ spring:
     port: ${RABBITMQ_PORT}
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
-
+    listener:
+      simple.max-concurrency: ${MAX_CONCURRENCY_WRITER:5}
+      simple.concurrency: ${MIN_CONCURRENCY_WRITER:5}
 
 
 info:
