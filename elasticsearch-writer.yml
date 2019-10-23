@@ -5,18 +5,23 @@ spring:
         input:
           destination: quality-added-datasets
           group: elasticsearch
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              exchangeDurable: false
+              durableSubscription: false     
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
-
-
+    listener:
+      simple.max-concurrency: ${MAX_CONCURRENCY_WRITER:5}
+      simple.concurrency: ${MIN_CONCURRENCY_WRITER:5}
 
 info:
   opal:
     elasticsearch:
       url: ${OPAL_ELASTICSEARCH_URL}
       port: ${OPAL_ELASTICSEARCH_PORT}
-#      username: ${OPAL_ELASTICSEARCH_USERNAME}
-#      password: ${OPAL_ELASTICSEARCH_PASSWORD}

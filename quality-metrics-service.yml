@@ -8,6 +8,15 @@ spring:
           group: civet
         output:
           destination: quality-added-datasets
+      rabbit:
+        bindings:
+          output:
+            producer:
+              exchangeDurable: false
+          input:
+            consumer:
+              exchangeDurable: false      
+              durableSubscription: false
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}

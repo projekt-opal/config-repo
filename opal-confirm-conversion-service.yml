@@ -6,6 +6,16 @@ spring:
           destination: dataset-graph
         output:
           destination: opal-confirmed
+      rabbit:
+        bindings:
+          output:
+            producer:
+              exchangeDurable: false
+          input:
+            consumer:
+              exchangeDurable: true
+              durableSubscription: false
+
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}
