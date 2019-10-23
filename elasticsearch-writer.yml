@@ -20,11 +20,8 @@ spring:
       simple.max-concurrency: ${MAX_CONCURRENCY_WRITER:5}
       simple.concurrency: ${MIN_CONCURRENCY_WRITER:5}
 
-
 info:
   opal:
     elasticsearch:
       url: ${OPAL_ELASTICSEARCH_URL}
       port: ${OPAL_ELASTICSEARCH_PORT}
-#      username: ${OPAL_ELASTICSEARCH_USERNAME}
-#      password: ${OPAL_ELASTICSEARCH_PASSWORD}
