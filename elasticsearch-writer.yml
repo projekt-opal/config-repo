@@ -25,3 +25,5 @@ info:
     elasticsearch:
       url: ${OPAL_ELASTICSEARCH_URL}
       port: ${OPAL_ELASTICSEARCH_PORT}
+server:
+  port: ${PORT:8005}
