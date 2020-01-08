@@ -26,3 +26,6 @@ info:
       url: http://${OPAL_TRIPLESTORE_URL}:3030/opal
       username: ${OPAL_TRIPLESTORE_USERNAME}
       password: ${OPAL_TRIPLESTORE_PASSWORD}
+server:
+  port: ${PORT:8004}
+  
