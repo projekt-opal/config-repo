@@ -22,3 +22,6 @@ spring:
     port: ${RABBITMQ_PORT}
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
+server:
+  port: ${PORT:8003}
+  
