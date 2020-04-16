@@ -4,9 +4,9 @@ spring:
       bindings:
         input:
           destination: dataset-graph
-          group: opal-vocabulary
+          group: opal-confirm-service
         output:
-          destination: opal-confirmed
+          destination: opal-confirm-service
       rabbit:
         bindings:
           output:

@@ -4,10 +4,10 @@ spring:
     stream:
       bindings:
         input:
-          destination: cleaned-data
+          destination: clean-data
           group: civet
         output:
-          destination: quality-added-datasets
+          destination: civet
       rabbit:
         bindings:
           output:

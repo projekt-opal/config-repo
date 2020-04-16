@@ -3,10 +3,10 @@ spring:
     stream:
       bindings:
         input:
-          destination: opal-confirmed
-          group: cleaner
+          destination: opal-confirm-service
+          group: clean-data
         output:
-          destination: cleaned-data
+          destination: clean-data
       rabbit:
         bindings:
           output:
