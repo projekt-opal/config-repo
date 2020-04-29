@@ -3,10 +3,10 @@ spring:
     stream:
       bindings:
         input:
-          destination: dataset-graph
-          group: opal-confirm-service
-        output:
           destination: opal-confirm-service
+          group: clean-data
+        output:
+          destination: clean-data
       rabbit:
         bindings:
           output:
@@ -23,4 +23,12 @@ spring:
     username: ${RABBITMQ_USERNAME}
     password: ${RABBITMQ_PASSWORD}
 server:
-  port: ${PORT:8002}
+  port: ${PORT:8006}
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}

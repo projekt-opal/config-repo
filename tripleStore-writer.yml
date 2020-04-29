@@ -3,7 +3,7 @@ spring:
     stream:
       bindings:
         input:
-          destination: quality-added-datasets
+          destination: civet
           group: triple-store
       rabbit:
         bindings:

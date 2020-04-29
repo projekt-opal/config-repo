@@ -1,0 +1,9 @@
+spring:
+  rabbitmq:
+    host: ${RABBITMQ_ADDRESS}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+
+server:
+  port: ${PORT:8007}

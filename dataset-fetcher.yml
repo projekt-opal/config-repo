@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: dataset-fetcher
   rabbitmq:
     host: ${RABBITMQ_ADDRESS}
     port: ${RABBITMQ_PORT}

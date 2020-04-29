@@ -4,10 +4,10 @@ spring:
     stream:
       bindings:
         input:
-          destination: opal-confirmed
+          destination: clean-data
           group: civet
         output:
-          destination: quality-added-datasets
+          destination: civet
       rabbit:
         bindings:
           output:
